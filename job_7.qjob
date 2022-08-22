@@ -1,0 +1,590 @@
+# 选择资源
+
+
+#PBS -N test_v5
+#PBS -l ngpus=1
+#PBS -l mem=46gb
+#PBS -l ncpus=8
+#PBS -l walltime=12:00:00
+#PBS -M han.tai@student.unsw.edu.au
+#PBS -m ae
+#PBS -j oe
+
+#PBS -o /srv/scratch/z5102138/test_ijcai_v5/
+source ~/anaconda3/etc/profile.d/conda.sh
+conda activate py36
+
+
+cd /srv/scratch/z5102138/test_ijcai_v5
+which python
+
+
+
+mkdir -p ./test_vehicle0/model_MLP_normal_2000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_normal_5000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_normal_8000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_normal_10000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_normal_15000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_normal_20000/record_1/
+
+
+
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=1 record_index=1 device_id=0 train_method=MLP_normal_20000
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=2 record_index=1 device_id=0 train_method=MLP_normal_20000
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=3 record_index=1 device_id=0 train_method=MLP_normal_20000
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=4 record_index=1 device_id=0 train_method=MLP_normal_20000
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=5 record_index=1 device_id=0 train_method=MLP_normal_20000
+
+
+
+mkdir -p ./test_vehicle0/model_MLP_bm_2000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_bm_5000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_bm_8000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_bm_10000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_bm_15000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_bm_20000/record_1/
+
+
+
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=1 record_index=1 device_id=0 train_method=MLP_bm_20000
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=2 record_index=1 device_id=0 train_method=MLP_bm_20000
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=3 record_index=1 device_id=0 train_method=MLP_bm_20000
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=4 record_index=1 device_id=0 train_method=MLP_bm_20000
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=5 record_index=1 device_id=0 train_method=MLP_bm_20000
+
+
+
+mkdir -p ./test_vehicle0/model_MLP_im_2000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_im_5000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_im_8000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_im_10000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_im_15000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_im_20000/record_1/
+
+
+
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=1 record_index=1 device_id=0 train_method=MLP_im_20000
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=2 record_index=1 device_id=0 train_method=MLP_im_20000
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=3 record_index=1 device_id=0 train_method=MLP_im_20000
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=4 record_index=1 device_id=0 train_method=MLP_im_20000
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=5 record_index=1 device_id=0 train_method=MLP_im_20000
+
+
+
+mkdir -p ./test_vehicle0/model_MLP_im2_2000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_im2_5000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_im2_8000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_im2_10000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_im2_15000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_im2_20000/record_1/
+
+
+
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=1 record_index=1 device_id=0 train_method=MLP_im2_20000
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=2 record_index=1 device_id=0 train_method=MLP_im2_20000
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=3 record_index=1 device_id=0 train_method=MLP_im2_20000
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=4 record_index=1 device_id=0 train_method=MLP_im2_20000
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=5 record_index=1 device_id=0 train_method=MLP_im2_20000
+
+
+
+mkdir -p ./test_vehicle0/model_MLP_im3_2000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_im3_5000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_im3_8000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_im3_10000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_im3_15000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_im3_20000/record_1/
+
+
+
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=1 record_index=1 device_id=0 train_method=MLP_im3_20000
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=2 record_index=1 device_id=0 train_method=MLP_im3_20000
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=3 record_index=1 device_id=0 train_method=MLP_im3_20000
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=4 record_index=1 device_id=0 train_method=MLP_im3_20000
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=5 record_index=1 device_id=0 train_method=MLP_im3_20000
+
+
+
+mkdir -p ./test_vehicle0/model_MLP_both_2000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_both_5000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_both_8000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_both_10000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_both_15000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_both_20000/record_1/
+
+
+
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=1 record_index=1 device_id=0 train_method=MLP_both_20000
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=2 record_index=1 device_id=0 train_method=MLP_both_20000
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=3 record_index=1 device_id=0 train_method=MLP_both_20000
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=4 record_index=1 device_id=0 train_method=MLP_both_20000
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=5 record_index=1 device_id=0 train_method=MLP_both_20000
+
+
+
+mkdir -p ./test_vehicle0/model_MLP_both2_2000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_both2_5000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_both2_8000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_both2_10000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_both2_15000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_both2_20000/record_1/
+
+
+
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=1 record_index=1 device_id=0 train_method=MLP_both2_20000
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=2 record_index=1 device_id=0 train_method=MLP_both2_20000
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=3 record_index=1 device_id=0 train_method=MLP_both2_20000
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=4 record_index=1 device_id=0 train_method=MLP_both2_20000
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=5 record_index=1 device_id=0 train_method=MLP_both2_20000
+
+
+
+mkdir -p ./test_vehicle0/model_MLP_both3_2000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_both3_5000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_both3_8000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_both3_10000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_both3_15000/record_1/
+mkdir -p ./test_vehicle0/model_MLP_both3_20000/record_1/
+
+
+
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=1 record_index=1 device_id=0 train_method=MLP_both3_20000
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=2 record_index=1 device_id=0 train_method=MLP_both3_20000
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=3 record_index=1 device_id=0 train_method=MLP_both3_20000
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=4 record_index=1 device_id=0 train_method=MLP_both3_20000
+python3 ./classifier_MLP/train_MLP.py dataset_name=vehicle0 dataset_index=5 record_index=1 device_id=0 train_method=MLP_both3_20000
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_normal_2000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_normal_2000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_normal_2000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_normal_2000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_normal_2000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_normal_2000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_normal_5000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_normal_5000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_normal_5000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_normal_5000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_normal_5000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_normal_5000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_normal_8000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_normal_8000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_normal_8000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_normal_8000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_normal_8000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_normal_8000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_normal_10000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_normal_10000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_normal_10000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_normal_10000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_normal_10000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_normal_10000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_normal_15000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_normal_15000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_normal_15000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_normal_15000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_normal_15000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_normal_15000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_normal_20000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_normal_20000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_normal_20000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_normal_20000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_normal_20000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_normal_20000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_bm_2000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_bm_2000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_bm_2000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_bm_2000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_bm_2000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_bm_2000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_bm_5000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_bm_5000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_bm_5000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_bm_5000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_bm_5000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_bm_5000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_bm_8000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_bm_8000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_bm_8000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_bm_8000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_bm_8000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_bm_8000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_bm_10000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_bm_10000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_bm_10000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_bm_10000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_bm_10000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_bm_10000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_bm_15000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_bm_15000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_bm_15000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_bm_15000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_bm_15000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_bm_15000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_bm_20000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_bm_20000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_bm_20000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_bm_20000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_bm_20000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_bm_20000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_im_2000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_im_2000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_im_2000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_im_2000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_im_2000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_im_2000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_im_5000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_im_5000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_im_5000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_im_5000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_im_5000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_im_5000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_im_8000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_im_8000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_im_8000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_im_8000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_im_8000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_im_8000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_im_10000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_im_10000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_im_10000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_im_10000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_im_10000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_im_10000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_im_15000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_im_15000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_im_15000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_im_15000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_im_15000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_im_15000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_im_20000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_im_20000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_im_20000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_im_20000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_im_20000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_im_20000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_im2_2000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_im2_2000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_im2_2000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_im2_2000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_im2_2000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_im2_2000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_im2_5000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_im2_5000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_im2_5000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_im2_5000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_im2_5000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_im2_5000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_im2_8000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_im2_8000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_im2_8000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_im2_8000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_im2_8000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_im2_8000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_im2_10000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_im2_10000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_im2_10000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_im2_10000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_im2_10000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_im2_10000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_im2_15000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_im2_15000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_im2_15000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_im2_15000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_im2_15000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_im2_15000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_im2_20000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_im2_20000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_im2_20000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_im2_20000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_im2_20000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_im2_20000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_im3_2000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_im3_2000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_im3_2000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_im3_2000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_im3_2000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_im3_2000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_im3_5000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_im3_5000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_im3_5000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_im3_5000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_im3_5000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_im3_5000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_im3_8000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_im3_8000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_im3_8000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_im3_8000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_im3_8000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_im3_8000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_im3_10000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_im3_10000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_im3_10000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_im3_10000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_im3_10000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_im3_10000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_im3_15000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_im3_15000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_im3_15000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_im3_15000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_im3_15000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_im3_15000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_im3_20000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_im3_20000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_im3_20000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_im3_20000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_im3_20000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_im3_20000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_both_2000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_both_2000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_both_2000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_both_2000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_both_2000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_both_2000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_both_5000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_both_5000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_both_5000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_both_5000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_both_5000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_both_5000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_both_8000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_both_8000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_both_8000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_both_8000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_both_8000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_both_8000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_both_10000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_both_10000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_both_10000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_both_10000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_both_10000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_both_10000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_both_15000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_both_15000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_both_15000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_both_15000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_both_15000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_both_15000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_both_20000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_both_20000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_both_20000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_both_20000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_both_20000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_both_20000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_both2_2000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_both2_2000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_both2_2000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_both2_2000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_both2_2000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_both2_2000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_both2_5000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_both2_5000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_both2_5000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_both2_5000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_both2_5000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_both2_5000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_both2_8000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_both2_8000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_both2_8000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_both2_8000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_both2_8000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_both2_8000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_both2_10000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_both2_10000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_both2_10000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_both2_10000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_both2_10000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_both2_10000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_both2_15000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_both2_15000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_both2_15000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_both2_15000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_both2_15000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_both2_15000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_both2_20000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_both2_20000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_both2_20000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_both2_20000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_both2_20000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_both2_20000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_both3_2000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_both3_2000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_both3_2000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_both3_2000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_both3_2000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_both3_2000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_both3_5000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_both3_5000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_both3_5000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_both3_5000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_both3_5000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_both3_5000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_both3_8000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_both3_8000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_both3_8000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_both3_8000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_both3_8000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_both3_8000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_both3_10000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_both3_10000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_both3_10000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_both3_10000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_both3_10000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_both3_10000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_both3_15000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_both3_15000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_both3_15000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_both3_15000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_both3_15000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_both3_15000 test_method=normal_num_10_half device_id=0
+
+
+
+mkdir -p ./test_vehicle0/result_MLP_both3_20000_normal_num_10_half/record_1/
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=1 record_index=1 train_method=MLP_both3_20000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=2 record_index=1 train_method=MLP_both3_20000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=3 record_index=1 train_method=MLP_both3_20000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=4 record_index=1 train_method=MLP_both3_20000 test_method=normal_num_10_half device_id=0
+python3 ./classifier_MLP/test.py dataset_name=vehicle0 dataset_index=5 record_index=1 train_method=MLP_both3_20000 test_method=normal_num_10_half device_id=0
+
+
+

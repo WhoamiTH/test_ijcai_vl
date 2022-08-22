@@ -1,0 +1,19 @@
+# 选择资源
+
+#PBS -N taihan_job_test_ijcai
+#PBS -l ngpus=1
+#PBS -l mem=46gb
+#PBS -l ncpus=8
+#PBS -l walltime=12:00:00
+#PBS -M han.tai@student.unsw.edu.au
+#PBS -m ae
+#PBS -j oe
+#PBS -o /srv/scratch/z5102138/test_ijcai_v2/
+
+source ~/anaconda3/etc/profile.d/conda.sh
+conda activate py36
+
+cd /srv/scratch/z5102138/test_ijcai_v2
+which python
+
+

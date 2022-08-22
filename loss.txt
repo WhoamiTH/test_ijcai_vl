@@ -1,0 +1,50 @@
+./test_pageblocks1/model_MLP_im3_10000/record_1/MLP_im3_10000_3
+pageblocks1 MLP_im3_10000 3
+
+
+
+
+./test_pageblocks1/model_MLP_both_20000/record_1/MLP_both_20000_4
+pageblocks1 MLP_both_20000 4
+
+
+
+
+./test_pageblocks1/model_MLP_both_20000/record_1/MLP_both_20000_5
+pageblocks1 MLP_both_20000 5
+
+
+
+
+./test_pageblocks1/model_MLP_both_15000/record_1/MLP_both_15000_5
+pageblocks1 MLP_both_15000 5
+
+
+
+
+./test_pageblocks1/model_MLP_both2_15000/record_1/MLP_both2_15000_5
+pageblocks1 MLP_both2_15000 5
+
+
+
+
+./test_pageblocks1/model_MLP_both2_10000/record_1/MLP_both2_10000_1
+pageblocks1 MLP_both2_10000 1
+
+
+
+
+./test_pageblocks1/model_MLP_both2_10000/record_1/MLP_both2_10000_2
+pageblocks1 MLP_both2_10000 2
+
+
+
+
+./test_pageblocks1/model_MLP_both2_10000/record_1/MLP_both2_10000_3
+pageblocks1 MLP_both2_10000 3
+
+
+
+
+8
+[['pageblocks1', 'MLP_im3_10000', 3], ['pageblocks1', 'MLP_both_20000', 4], ['pageblocks1', 'MLP_both_20000', 5], ['pageblocks1', 'MLP_both_15000', 5], ['pageblocks1', 'MLP_both2_15000', 5], ['pageblocks1', 'MLP_both2_10000', 1], ['pageblocks1', 'MLP_both2_10000', 2], ['pageblocks1', 'MLP_both2_10000', 3]]
