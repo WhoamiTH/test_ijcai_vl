@@ -137,7 +137,7 @@ for file_index in range(1, total_file_num+1):
     print(len(cur_command_list))
     with open('job_{0}.qjob'.format(file_index), 'w') as fsh:
         fsh.write('# 选择资源\n\n\n')
-        fsh.write('#PBS -N test_v5\n')
+        fsh.write('#PBS -N test_vl\n')
         fsh.write('#PBS -l ngpus=1\n')
         fsh.write('#PBS -l mem=46gb\n')
         fsh.write('#PBS -l ncpus=8\n')
@@ -145,10 +145,10 @@ for file_index in range(1, total_file_num+1):
         fsh.write('#PBS -M han.tai@student.unsw.edu.au\n')
         fsh.write('#PBS -m ae\n')
         fsh.write('#PBS -j oe\n\n')
-        fsh.write('#PBS -o /srv/scratch/z5102138/test_ijcai_v5/\n')
+        fsh.write('#PBS -o /srv/scratch/z5102138/test_ijcai_vl/\n')
         fsh.write('source ~/anaconda3/etc/profile.d/conda.sh\n')
         fsh.write('conda activate py36\n\n\n')
-        fsh.write('cd /srv/scratch/z5102138/test_ijcai_v5\n')
+        fsh.write('cd /srv/scratch/z5102138/test_ijcai_vl\n')
         fsh.write('which python\n\n\n\n')
         for item_command_list in cur_command_list:
             for line in item_command_list:
